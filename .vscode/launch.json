@@ -1,0 +1,114 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "control_debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/apollo/bazel-bin/cyber/mainboard/mainboard",
+            "args": ["-d","/apollo/modules/control/dag/control.dag"],
+            "stopAtEntry": false,
+            "cwd": "/apollo",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "test_deug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/apollo/bazel-bin/modules/control/control_component_test",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb"
+
+        },
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "/usr/bin/python",
+            "program": "/apollo/modules/tools/record_play/rtk_player_yanghq13.py",
+            "cwd": "${workspaceRoot}",
+            "env": {},
+            "envFile": "${workspaceRoot}/.env",
+            "debugOptions": [
+                "WaitOnAbnormalExit",
+                "WaitOnNormalExit",
+                "RedirectOutput"
+            ]
+        }
+    ]
+}
+
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+
+//         {
+//             "name": "(gdb) Launch",
+//             "type": "cppdbg",
+//             "request": "launch",
+//             "program": "/apollo/bazel-bin/modules/control/control_component_test",
+//             "args": [],
+//             "stopAtEntry": false,
+//             "cwd": "${workspaceFolder}",
+//             "environment": [],
+//             "externalConsole": false,
+//             "MIMode": "gdb",
+//             "setupCommands": [
+//                 {
+//                     "description": "Enable pretty-printing for gdb",
+//                     "text": "-enable-pretty-printing",
+//                     "ignoreFailures": true
+//                 }
+//             ],
+//             "miDebuggerPath": "/usr/bin/gdb"
+
+//         }
+//     ]
+// }
+
+// debug python config
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Python",
+//             "type": "python",
+//             "request": "launch",
+//             "stopOnEntry": false,
+//             "pythonPath": "/usr/bin/python",
+//             "program": "/apollo/modules/tools/record_play/rtk_player_yanghq13.py",
+//             "cwd": "${workspaceRoot}",
+//             "env": {},
+//             "envFile": "${workspaceRoot}/.env",
+//             "debugOptions": [
+//                 "WaitOnAbnormalExit",
+//                 "WaitOnNormalExit",
+//                 "RedirectOutput"
+//             ]
+//         }
+//     ]
+// }
+

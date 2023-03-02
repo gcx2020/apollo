@@ -20,7 +20,7 @@ py_proto
 .idea
 
 # VS Code files
-.vscode
+# .vscode
 
 # Atom IDE files
 *.gch
